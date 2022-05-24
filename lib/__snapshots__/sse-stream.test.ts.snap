@@ -1,0 +1,18 @@
+export const snapshot = {};
+
+snapshot[`sse-stream > can receive events from readableStream property 1`] = `
+[
+  {
+    done: false,
+    value: "event: event1 
+
+",
+  },
+  {
+    done: false,
+    value: "event: event2 
+
+",
+  },
+]
+`;
