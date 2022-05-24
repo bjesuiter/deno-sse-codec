@@ -1,37 +1,19 @@
-# Deno Scripting Template
+# Deno SSE Codec
 
-A template repo for developing scripts with deno. These scripts can be compiled
-to single js files or even bundled with the deno executable for distribution.
+A deno module packaging encoding & decoding functionality for SSE Events, as well as providing some types.
 
-This could also be used as a base for a cli written in deno, simply use a
-cli-args parsing package in `main.ts` and build out the commands.
+## Usage in Deno
 
-## Folder Structure
+See the test files for most elaborate usage descriptions. Here's the TL;DR  
+(adjust the import path to the complete URL from deno.land/x): 
 
-- `.vscode` = A folder, 
-  - containing a `settings.json` which activates the deno language server for this workspace
-  - containing a `extensions.json` with recommended vscode extensions for this workspace
-- `example` = A folder, containing entry deno files for demonstrating the modules functionalities 
-   - contains `main.ts` - the default file for examples
-- `dependencies` = A folder, including dependency re-exports
-- `lib` = A folder containing more source files which are exported by `mod.ts`
-   - Hint: you may create multiple of them to structure your module.
-- `.gitignore` = A normal gitingore file
-- `deno.json` - a config file for the deno cli
-   - includes tasks (a.k.a aliases for long commands) with `deno task`
-- `LICENSE`
-- `mod.ts` = the entrypoint for this deno module, which exports all functionality of this module
-- `Readme.md` = A normal Readme file
+```
+import { encodeSSEEvent } from "./encode-sse-event.ts";
+const sseString = encodeSSEEvent({
+        name: "custom-event",
+        data: "Some simple string data",
+        id: "UID5346324874238475",
+        retry: 5000,
+      });
 
-## Running examples 
-
-see `tasks` property in `deno.json`
-Run each key there with `deno task <task-key>`
-
-## Customize this repo 
-
-- replace `lib/startKia.ts` with a file which makes more sense for your deno module
-
-## Configure Deployments to deno.land/x 
-
-see https://deno.land/add_module
+```
