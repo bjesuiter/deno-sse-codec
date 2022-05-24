@@ -21,8 +21,8 @@ describe(`sse-stream`, () => {
     const sseStream = new SSEStream();
     const reader = sseStream.readableStream.getReader();
 
-    sseStream.emit({ name: "event1" });
-    sseStream.emit({ name: "event2" });
+    sseStream.emit({ eventName: "event1" });
+    sseStream.emit({ eventName: "event2" });
 
     const chunk1 = await reader.read();
     const chunk2 = await reader.read();

@@ -11,7 +11,7 @@ export interface SSEEvent {
   /**
    * The name of this SSE event
    */
-  name?: string;
+  eventName?: string;
 
   /**
    * The data which should be transmitted as string (nothing other supported)
