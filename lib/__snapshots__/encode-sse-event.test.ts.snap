@@ -1,0 +1,26 @@
+export const snapshot = {};
+
+snapshot[`encode-sse-event > should encode single properties 1`] = `
+"id: UID5346324874238475 
+
+"
+`;
+
+snapshot[`encode-sse-event > should encode single properties 2`] = `
+"event: custom-event 
+
+"
+`;
+
+snapshot[`encode-sse-event > should encode single properties 3`] = `
+"data: Some simple string data 
+
+"
+`;
+
+snapshot[`encode-sse-event > should encode single properties 4`] = `
+"event: custom-event 
+retry: 5000 
+
+"
+`;
