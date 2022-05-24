@@ -26,4 +26,16 @@ describe(`encode-sse-event`, () => {
       encodeSSEEvent({ name: "custom-event", retry: 5000 }),
     );
   });
+
+  it(`should encode a complete SSEEvent`, async (t) => {
+    await assertSnapshot(
+      t,
+      encodeSSEEvent({
+        name: "custom-event",
+        data: "Some simple string data",
+        id: "UID5346324874238475",
+        retry: 5000,
+      }),
+    );
+  });
 });

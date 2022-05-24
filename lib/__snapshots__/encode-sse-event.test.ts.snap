@@ -24,3 +24,12 @@ retry: 5000
 
 "
 `;
+
+snapshot[`encode-sse-event > should encode a complete SSEEvent 1`] = `
+"event: custom-event 
+data: Some simple string data 
+id: UID5346324874238475 
+retry: 5000 
+
+"
+`;
