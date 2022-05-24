@@ -1,4 +1,3 @@
-import { Integer } from "https://cdn.skypack.dev/type-fest?dts";
 /**
  * Note: Everything in this interface is optional, since the spec does not define
  * which properties need to be present in one single sse event.
@@ -31,5 +30,5 @@ export interface SSEEvent {
    * This must be an integer, specifying the reconnection time in milliseconds.
    * If a non-integer value is specified, the field is ignored.
    */
-  retry?: Integer;
+  retry?: number;
 }
