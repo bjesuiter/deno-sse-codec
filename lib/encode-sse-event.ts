@@ -18,16 +18,19 @@ export function encodeSSEEvent({ name, data, id, retry }: SSEEvent): string {
   }
 
   if (data) {
-    sseString += `data: ${data}`;
+    sseString += `data: ${data} \n`;
   }
 
   if (id) {
-    sseString += `id: ${id}`;
+    sseString += `id: ${id} \n`;
   }
 
   if (retry) {
-    sseString += `retry: ${retry}`;
+    sseString += `retry: ${retry} \n`;
   }
+
+  // add an empty line after the completed event
+  sseString += `\n`;
 
   return sseString;
 }
