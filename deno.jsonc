@@ -19,6 +19,7 @@
      */
     "tasks": {
         "start": "deno run --unstable example/main.ts",
+        "test": "deno test --allow-read",
         "update-snapshots": "deno test --allow-all -- --update"
     }
 }
