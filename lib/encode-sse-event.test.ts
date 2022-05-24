@@ -16,14 +16,14 @@ describe(`encode-sse-event`, () => {
 
   it(`should encode single properties`, async (t) => {
     await assertSnapshot(t, encodeSSEEvent({ id: "UID5346324874238475" }));
-    await assertSnapshot(t, encodeSSEEvent({ name: "custom-event" }));
+    await assertSnapshot(t, encodeSSEEvent({ eventName: "custom-event" }));
     await assertSnapshot(
       t,
       encodeSSEEvent({ data: "Some simple string data" }),
     );
     await assertSnapshot(
       t,
-      encodeSSEEvent({ name: "custom-event", retry: 5000 }),
+      encodeSSEEvent({ eventName: "custom-event", retry: 5000 }),
     );
   });
 
@@ -31,7 +31,7 @@ describe(`encode-sse-event`, () => {
     await assertSnapshot(
       t,
       encodeSSEEvent({
-        name: "custom-event",
+        eventName: "custom-event",
         data: "Some simple string data",
         id: "UID5346324874238475",
         retry: 5000,
