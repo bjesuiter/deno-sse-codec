@@ -34,4 +34,6 @@ export class SSEStream implements UnderlyingSource {
 
     this.controller.enqueue(sseString);
   }
+
+  // TODO: add a emitMany method
 }
