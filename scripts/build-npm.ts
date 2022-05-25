@@ -20,10 +20,10 @@ await build({
     license: "MIT",
     repository: {
       type: "git",
-      url: "git@github.com:bjesuiter/deno-sse-codec.git",
+      url: "git+https://github.com/codemonument/deno-sse-codec.git",
     },
     bugs: {
-      url: "https://github.com/bjesuiter/deno-sse-codec/issues",
+      url: "https://github.com/codemonument/deno-sse-codec/issues",
     },
   },
 });
