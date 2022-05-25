@@ -1,4 +1,4 @@
-import { build, emptyDir } from "https://deno.land/x/dnt/mod.ts";
+import { build, emptyDir } from "https://deno.land/x/dnt@0.23.0/mod.ts";
 import { VERSION } from "../version.ts";
 
 await emptyDir("./npm");
@@ -16,7 +16,7 @@ await build({
     name: "@codemonument/sse-codec",
     version: VERSION,
     description:
-      "A package for encoding & decoding functionality for SSE Events, as well as providing some types. Cross-Compiled by deno's dnt module",
+      "A module which provides encoding & decoding functionality for SSE Events (Server Sent Events), as well as some types. Cross-Compiled by deno's dnt module. Also available at https://deno.land/x/sse_codec .",
     license: "MIT",
     repository: {
       type: "git",
