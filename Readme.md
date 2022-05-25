@@ -1,11 +1,10 @@
-# Deno SSE Codec
+# SSE Codec
 
-A deno module packaging encoding & decoding functionality for SSE Events, 
-as well as providing some types.
+A module which provides encoding & decoding functionality for SSE Events (Server Sent Events), as well as providing some types.
 
 Deployed to [https://deno.land/x/sse_codec](https://deno.land/x/sse_codec)
 
-Cross-posted to npm as [@codemonument/sse-codec](https://www.npmjs.com/package/@codemonument/sse-codec)
+Cross-Copiled by deno's dnt module and posted to npm as [@codemonument/sse-codec](https://www.npmjs.com/package/@codemonument/sse-codec)
 
 ## Imports in Deno
 
