@@ -19,18 +19,19 @@ describe(`sse-stream`, () => {
 
   it(`can receive events from readableStream property`, async (t) => {
     const sseStream = new SSEStream();
-    const reader = sseStream.readableStream.getReader();
 
     sseStream.emit({ eventName: "event1" });
     sseStream.emit({ eventName: "event2" });
 
+    const reader = sseStream.readableStream.getReader();
     const chunk1 = await reader.read();
     const chunk2 = await reader.read();
 
     console.log(chunk1);
     console.log(chunk2);
 
-    assertSnapshot(t, [chunk1, chunk2]);
     sseStream.end();
+
+    assertSnapshot(t, [chunk1, chunk2]);
   });
 });
