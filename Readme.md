@@ -1,16 +1,37 @@
 # Deno SSE Codec
 
-A deno module packaging encoding & decoding functionality for SSE Events, as well as providing some types.
+A deno module packaging encoding & decoding functionality for SSE Events, 
+as well as providing some types.
 
-## Usages in Deno
+Deployed to [https://deno.land/x/sse_codec](https://deno.land/x/sse_codec)
 
-See the test files for most elaborate usage descriptions. Here's the TL;DR  
-(adjust the import path to the complete URL from deno.land/x): 
+Cross-posted to npm as [@codemonument/sse-codec](https://www.npmjs.com/package/@codemonument/sse-codec)
+
+## Imports in Deno
+
+```
+// uses 'latest' version 
+import { encodeSSEEvent } from "https://deno.land/x/sse_codec"
+
+// uses a specific version
+import { encodeSSEEvent } from "https://deno.land/x/sse_codec@0.2.1";
+```
+
+## Imports in Node 
+
+```
+// install first via npm i -S @codemonument/sse-codec
+import { encodeSSEEvent } from "@codemonument/sse-codec" 
+```
+
+## Usage (same in Deno & Node)
+
+See the test files for most elaborate usage descriptions. 
+He'res the most important usage information. 
 
 ### Usage encodeSSEEvent 
 
 ```
-import { encodeSSEEvent } from "./encode-sse-event.ts";
 const sseString = encodeSSEEvent({
         name: "custom-event",
         data: "Some simple string data",
@@ -23,8 +44,6 @@ const sseString = encodeSSEEvent({
 ### Usage SSEStream class
 
 ```
-  import { SSEStream } from "./sse-stream.ts";
-
   const sseStream = new SSEStream();
 
   sseStream.emit({ eventName: "event1" });
