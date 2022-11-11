@@ -10,6 +10,7 @@
     "compilerOptions": {
         "strict": true
     },
+    "importMap": "import_map.json",
     /**
      * Deno tasks is currently unstable. 
      If you need an alternative, you can use https://deno.land/x/velociraptor
