@@ -3,7 +3,7 @@ import {
   assertThrows,
   describe,
   it,
-} from "../dependencies/_testing.std.ts";
+} from "@deps/std_testing.ts";
 import { encodeSSEEvent } from "./encode-sse-event.ts";
 
 describe(`encode-sse-event`, () => {

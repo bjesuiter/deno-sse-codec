@@ -4,7 +4,7 @@ import {
   assertSnapshot,
   describe,
   it,
-} from "../dependencies/_testing.std.ts";
+} from "@deps/std_testing.ts";
 
 describe(`sse-stream`, () => {
   it(`can be constructed`, () => {
