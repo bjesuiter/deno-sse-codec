@@ -23,7 +23,7 @@ describe(`sse-stream`, () => {
     sseStream.emit({ eventName: "event1" });
     sseStream.emit({ eventName: "event2" });
 
-    const reader = sseStream.readableStream.getReader();
+    const reader = sseStream.getReader();
     const chunk1 = await reader.read();
     const chunk2 = await reader.read();
 
