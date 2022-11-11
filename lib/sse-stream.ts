@@ -30,12 +30,23 @@ export class SSEStream extends ReadableStream<SSEEvent> {
     this.controller.enqueue(sseString);
   }
 
+  public emitMany(events: SSEEvent[]) {
+    if (!this.controller) {
+      throw new IllegalArgumentError(
+        `No readable stream controller available yet. Please wait a bit longer, it should appear automatically`,
+      );
+    }
+
+    for (const event of events) {
+      const sseString = encodeSSEEvent(event);
+      this.controller.enqueue(sseString);
+    }
+  }
+
   /**
    * Closes the underlying controller of this SSEStream
    */
   public end() {
     this.controller?.close();
   }
-
-  // TODO: add a emitMany method
 }
