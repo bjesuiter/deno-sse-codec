@@ -3,6 +3,7 @@
     "@mod": "./mod.ts",
     "@version": "./version.ts",
     "@deps/": "./deps/",
-    "@testutils/": "./tests/_testutils/"
+    "@testutils/": "./tests/_testutils/",
+    "rx_webstreams": "https://deno.land/x/rx_webstreams@0.3.0"
   }
 }
