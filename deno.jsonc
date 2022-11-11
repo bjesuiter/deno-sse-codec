@@ -21,8 +21,8 @@
     "tasks": {
         "start": "deno run --unstable example/main.ts",
         "test": "deno test --allow-read",
+        "testu": "deno test --allow-all -- --update",
         "build-npm": "deno run -A ./scripts/build-npm.ts",
-        "publish-npm": "npm publish ./npm --access public",
-        "update-snapshots": "deno test --allow-all -- --update"
+        "publish-npm": "npm publish ./npm --access public"
     }
 }
